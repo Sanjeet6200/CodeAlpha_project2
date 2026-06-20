@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="music.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="music-player">
+        <!-- Album Art -->
+        <div class="album-art">
+            <img id="albumArt" src="https://via.placeholder.com/300?text=Album+Art" alt="Album Art">
+        </div>
+
+        <!-- Song Info -->
+        <div class="song-info">
+            <h2 id="songTitle">Song Title</h2>
+            <p id="artistName">Artist Name</p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <span id="currentTime">0:00</span>
+            <input type="range" id="progressBar" class="progress-bar" value="0" min="0" max="100">
+            <span id="duration">0:00</span>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button id="prevBtn" class="control-btn">
+                <i class="fas fa-step-backward"></i>
+            </button>
+            <button id="playPauseBtn" class="control-btn play-btn">
+                <i class="fas fa-play"></i>
+            </button>
+            <button id="nextBtn" class="control-btn">
+                <i class="fas fa-step-forward"></i>
+            </button>
+        </div>
+
+        <!-- Volume Control -->
+        <div class="volume-container">
+            <i class="fas fa-volume-down"></i>
+            <input type="range" id="volumeControl" class="volume-control" value="70" min="0" max="100">
+            <i class="fas fa-volume-up"></i>
+        </div>
+
+        <!-- Playlist -->
+        <div class="playlist-section">
+            <h3>Playlist</h3>
+            <ul id="playlist" class="playlist"></ul>
+        </div>
+
+        <!-- Audio Element -->
+        <audio id="audioPlayer"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
